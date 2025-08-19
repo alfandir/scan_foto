@@ -40,3 +40,36 @@ Foto diinput dalam berbagai format (JPG, PNG, WEBP), lalu script akan menganalis
 ```bash
 pip install opencv-python pillow numpy
 ```
+
+2. Pastikan file model gender tersedia di folder project:
+
+```bash
+gender_net.caffemodel
+
+gender_deploy.prototxt
+```
+
+3. Siapkan folder foto input, misal:
+
+```bash
+assets
+├── img1.jpg
+├── img2.jpg
+└── img3.jpg
+```
+
+4. Jalankan script dengan command `python cek_foto.py`
+
+5. Output akan muncul di terminal.
+
+```bash
+{
+    "gender": "male",
+    "background": True,
+    "jas_hitam": True,
+    "kemeja_putih": True,
+    "dasi_hitam": True,
+    "hijab_hitam": False,
+    "rambut_rapi": False
+}
+```
